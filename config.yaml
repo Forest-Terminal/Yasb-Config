@@ -45,7 +45,7 @@ widgets:
     options:
       label: "<span>♫</span> {artist}"
       label_alt: "<span>\uf001</span> {title} - {artist}"
-      hide_empty: true
+      hide_empty: false
       max_field_size:
         label: 20
         label_alt: 40
