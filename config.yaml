@@ -43,34 +43,31 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
-    label: "{artist}"
-    label_alt: "{title} - {artist}"
-    hide_empty: false
-    #callbacks:
-    # on_left: "toggle_play_pause"
-    #on_middle: "do_nothing"
-    #on_right: "toggle_label"
-    max_field_size:
-      label: 20
-      label_alt: 30
-    show_thumbnail: true
-    controls_only: false
-    controls_left: true
-    controls_hide: true
-    thumbnail_alpha: 80
-    thumbnail_padding: 8
-    thumbnail_corner_radius: 16
-    icons:
-      prev_track: "\ue892"
-      next_track: "\ue893"
-      play: "\ue768"
-      pause: "\ue769"
+      label: "<span>♫</span> {artist}"
+      label_alt: "<span>\uf001</span> {title} - {artist}"
+      hide_empty: true
+      max_field_size:
+        label: 20
+        label_alt: 40
+      show_thumbnail: false
+      controls_hide: true
+      thumbnail_alpha: 50
+      thumbnail_padding: 70
+      thumbnail_corner_radius: 5
+      icons:
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        play: "\ue768"
+        pause: "\ue769"
+      callbacks:
+        on_left: "toggle_play_pause"
+
   github:
     type: "yasb.github.GithubWidget"
     options:
       label: "<span>\ueba1</span>Notifications {data}"
       label_alt: "Notifications {data}" # {data} return number of unread notification
-      token: ghp_xxxxxxx # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      token: ghp_xxxxxx # GitHub Personal access tokens (classic) https://github.com/settings/tokens
       max_notification: 20 # Max number of notification displaying in menu max: 50
       only_unread: true # Show only unread or all notifications;
       max_field_size: 54 # Max characters in title before truncation.
